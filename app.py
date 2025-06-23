@@ -7,6 +7,21 @@ import os
 import uuid
 import json
 
+import requests
+
+MODEL_URL = "https://huggingface.co/Bharathchilaka/poultry-disease-model/resolve/main/best.pt"
+MODEL_PATH = "models/best.pt"
+
+os.makedirs("models", exist_ok=True)
+
+if not os.path.exists(MODEL_PATH):
+    print("Downloading model from Hugging Face...")
+    response = requests.get(MODEL_URL)
+    with open(MODEL_PATH, 'wb') as f:
+        f.write(response.content)
+    print("Download complete.")
+
+
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
