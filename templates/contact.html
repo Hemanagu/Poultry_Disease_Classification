@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact - PoultryDetect</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --text: #fff;
+    }
+    body.light {
+      --bg: #fff;
+      --text: #000;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      transition: 0.3s;
+    }
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.85);
+    }
+    .navbar-brand {
+      font-size: 1.8em;
+      color: limegreen !important;
+      font-weight: bold;
+      font-family: 'Segoe UI Black', sans-serif;
+      letter-spacing: 1px;
+    }
+    .nav-link {
+      color: white !important;
+      margin-left: 15px;
+    }
+    .form-check-label {
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark px-4">
+    <a class="navbar-brand" href="/">PoultryDetect</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="/predict">Predict</a></li>
+      </ul>
+      <div class="form-check form-switch ms-3">
+        <input class="form-check-input" type="checkbox" id="themeToggle" onclick="toggleTheme()" />
+        <label class="form-check-label" for="themeToggle">Light Mode</label>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <div class="container py-5">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or feedback, feel free to reach out:</p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:smartinternz44653@gmail.com">smartinternz44653@gmail.com</a></li>
+      <li><strong>Team Size:</strong>4</li>
+      <li><strong>Team Members:</strong>
+        <ul>
+          <li>Bharath Chilaka</li>
+          <li>Donda Nagamma</li>
+          <li>Battula Benarjibabu</li>
+          <li>Banavath Saikishor Naik</li>
+        </ul>
+
+</li>
+      <li><strong>Address:</strong> Andhra Pradesh,India</li>
+    </ul>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    function toggleTheme() {
+      const light = document.body.classList.toggle('light');
+      localStorage.setItem('theme', light ? 'light' : 'dark');
+      document.getElementById('themeToggle').checked = light;
+    }
+    (function () {
+      const saved = localStorage.getItem('theme') === 'light';
+      if (saved) document.body.classList.add('light');
+      document.getElementById('themeToggle').checked = saved;
+    })();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

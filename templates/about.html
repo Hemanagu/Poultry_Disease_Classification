@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About - PoultryDetect</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --text: #fff;
+    }
+    body.light {
+      --bg: #fff;
+      --text: #000;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      transition: 0.3s;
+    }
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.85);
+    }
+    .navbar-brand {
+      font-size: 1.8em;
+      color: limegreen !important;
+      font-weight: bold;
+      font-family: 'Segoe UI Black', sans-serif;
+      letter-spacing: 1px;
+    }
+    .nav-link {
+      color: white !important;
+      margin-left: 15px;
+    }
+    .form-check-label {
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark px-4">
+    <a class="navbar-brand" href="/">PoultryDetect</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="/predict">Predict</a></li>
+      </ul>
+      <div class="form-check form-switch ms-3">
+        <input class="form-check-input" type="checkbox" id="themeToggle" onclick="toggleTheme()" />
+        <label class="form-check-label" for="themeToggle">Light Mode</label>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+    <h2>About PoultryDetect</h2>
+    <p>PoultryDetect is a smart AI-powered web application that uses deep learning to help poultry farmers and veterinarians detect diseases in chickens through image analysis.</p>
+    <ul>
+      <li><strong>Mission:</strong> Empower poultry owners with fast, reliable, and accessible disease detection using technology.</li>
+      <li><strong>How it Works:</strong> Users upload an image of a chicken. The AI model classifies whether the bird is healthy or suffering from diseases such as Coccidiosis, Salmonella, or Newcastle Disease.</li>
+      <li><strong>Technologies Used:</strong> Python, Flask, TensorFlow/Keras, Bootstrap, HTML/CSS, JavaScript.</li>
+      <li><strong>Benefits:</strong> Early disease detection, cost-effective screening, and reduced poultry mortality.</li>
+    </ul>
+    <p>Whether you are a poultry farmer, student, or developer, PoultryDetect aims to demonstrate the practical use of AI in agriculture and animal health.</p>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const light = document.body.classList.toggle('light');
+      localStorage.setItem('theme', light ? 'light' : 'dark');
+      document.getElementById('themeToggle').checked = light;
+    }
+    (function () {
+      const saved = localStorage.getItem('theme') === 'light';
+      if (saved) document.body.classList.add('light');
+      document.getElementById('themeToggle').checked = saved;
+    })();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

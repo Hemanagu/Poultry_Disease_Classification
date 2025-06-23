@@ -1,0 +1,172 @@
+/* ============================= */
+/* BASE DARK MODE STYLES        */
+/* ============================= */
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #000;
+  color: #fff;
+  scroll-behavior: smooth;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.navbar {
+  background-color: #000 !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.navbar .nav-link {
+  color: #aaa !important;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #2ecc71 !important;
+  letter-spacing: 1px;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 2.3em;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background-color: #2ecc71;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #27ae60;
+}
+
+.upload-box {
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  background-color: #111;
+  transition: 0.3s;
+}
+
+.upload-box:hover {
+  background-color: #1a1a1a;
+  border-color: #2ecc71;
+}
+
+.upload-label {
+  cursor: pointer;
+  color: #999;
+}
+
+.card {
+  background-color: #111;
+  color: white;
+  transition: transform 0.3s;
+  border: 1px solid #222;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 255, 0, 0.4);
+}
+
+.card-img-top {
+  transition: transform 0.4s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 12px #2ecc71);
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2ecc71;
+  padding: 12px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.scroll-top:hover {
+  background-color: #27ae60;
+}
+
+/* ============================= */
+/* LIGHT MODE OVERRIDES         */
+/* ============================= */
+
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light .navbar {
+  background-color: #f8f9fa !important;
+}
+
+body.light .nav-link {
+  color: #333 !important;
+}
+
+body.light .nav-link:hover,
+body.light .nav-link.active {
+  color: #000 !important;
+  font-weight: bold;
+}
+
+body.light .upload-box {
+  background-color: #fefefe !important;
+  border-color: #ddd;
+}
+
+body.light .upload-label {
+  color: #333 !important;
+}
+
+body.light .btn-custom {
+  background-color: #28a745;
+  color: white;
+}
+
+body.light .card {
+  background-color: #f9f9f9;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+body.light .card-text,
+body.light .card-title {
+  color: #000;
+}
+
+body.light .card:hover .card-img-top {
+  filter: drop-shadow(0 0 10px #27ae60);
+}
