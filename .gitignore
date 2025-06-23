@@ -7,7 +7,7 @@ __pycache__/
 uploads/
 
 # Ignore model files
-models/*.pth
-models/*.pt
+#models/*.pth
+#models/*.pt
 models/*.ckpt
 
