@@ -2,3 +2,12 @@ venv/
 __pycache__/
 *.pyc
 .DS_Store
+
+# Ignore uploaded files
+uploads/
+
+# Ignore model files
+models/*.pth
+models/*.pt
+models/*.ckpt
+
