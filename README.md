@@ -4,6 +4,9 @@
 
 > 🎯 **Mission:** Empower poultry owners with fast, reliable, and accessible disease detection using technology.
 
+
+**[GO TO LIVE DEMO](https://huggingface.co/spaces/Bharathchilaka/poultry-infer-api)**
+
 ---
 
 ## 📸 How It Works
